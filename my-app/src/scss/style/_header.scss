@@ -18,6 +18,7 @@ header{
   }
   .container{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -31,7 +32,7 @@ header{
 
       .header_menu_element{
         text-transform: uppercase;
-        padding: 2.3vw;
+        padding: 3.5vh 2vw;
         font-size: 2vh;
       }
     }
