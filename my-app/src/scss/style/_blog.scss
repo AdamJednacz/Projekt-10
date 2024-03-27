@@ -10,13 +10,12 @@
 
 
     h1 {
-      margin-top: 15vh;
-      margin-bottom: 5vh;
+
       text-align: center;
       font-size: 8vh;
       font-weight: 700;
       position: relative;
-
+      margin: 15vh 0 5vh 0;
       &::before {
         content: "";
         width: 5vw;
