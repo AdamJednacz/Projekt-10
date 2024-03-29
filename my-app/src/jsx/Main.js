@@ -1,9 +1,6 @@
 import React from 'react';
 import arrow from "../assets/arrow down.webp"
 const Main = () => {
-
-
-
     return (
         <section className="main">
             <div className="container">
@@ -17,5 +14,4 @@ const Main = () => {
         </section>
     );
 };
-
 export default Main;

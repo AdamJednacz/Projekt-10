@@ -3,7 +3,6 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-
   .container {
     width: 100%;
     height: 100%;
@@ -55,7 +54,6 @@
         -webkit-box-shadow: 0 0 24px -3px rgba(152, 152, 175, 1);
         -moz-box-shadow: 0 0 24px -3px rgba(152, 152, 175, 1);
         box-shadow: 0 0 24px -3px rgba(152, 152, 175, 1);
-
         &:nth-of-type(2){
           padding: 4em;
           -webkit-box-shadow: 0 0 24px 7px rgba(152, 152, 175, 1);
@@ -85,6 +83,7 @@
               margin-bottom: 2vh;
               margin-top: 4vh;
               font-weight: 700;
+
             }
             p,li {
               color: #fff;
@@ -157,9 +156,6 @@
                 clip-path: inset(0 0 0 98%);
               }
             }
-
-
-
         }
       }
     }

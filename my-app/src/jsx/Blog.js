@@ -3,19 +3,15 @@ import blog_1 from "../assets/blog_1.jpg";
 import blog_2 from "../assets/blog_2.jpg";
 import blog_3 from "../assets/blog_3.jpg";
 import blog_bg from "../assets/blog_bg.jpg";
-
 const Blog = () => {
     const [activeIndex, setActiveIndex] = useState(null);
-
     const handleClick = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
-
     const style = {
         backgroundImage: `url(${blog_bg})`,
         backgroundSize: "cover"
     };
-
     return (
         <section style={style} className="blog">
             <div className="container">
@@ -83,5 +79,4 @@ const Blog = () => {
         </section>
     );
 };
-
 export default Blog;

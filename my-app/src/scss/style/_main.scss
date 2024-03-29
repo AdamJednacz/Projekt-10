@@ -21,8 +21,7 @@
       background-color: transparent;
       margin-bottom: 8vh;
       -webkit-text-stroke: 2px #ffffff;
-      color:rgba(0,0,0,0.5);
-
+      color:rgba(0,0,0,0.5)
     }
     p{
       color: #ffffff;
@@ -31,7 +30,6 @@
     }
     .main_btns{
       display: flex;
-
       .main_btn{
         position: relative;
         width: 12vw;
@@ -51,14 +49,11 @@
           background-color: #0000009d ;
           color: #ffffff;
         }
-
         &:active {
           filter: contrast(0.9);
         }
-
         &::before,
         &::after {
-
           content: "";
           position: absolute;
           top: -10px;
@@ -69,20 +64,16 @@
           transition: all .5s;
           animation: clippath 6s infinite linear;
           border-radius: 10px;
-
         }
-
         &::after {
           animation: clippath 6s infinite -3s linear;
         }
       }
-
       @keyframes clippath {
         0%,
         100% {
           clip-path: inset(0 0 98% 0);
         }
-
         25% {
           clip-path: inset(0 98% 0 0);
         }
@@ -104,5 +95,4 @@
       left: 47.5%;
     }
   }
-
 }
