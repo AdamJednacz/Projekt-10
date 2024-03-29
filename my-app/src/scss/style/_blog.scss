@@ -2,10 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 90vh;
+  border-top: solid #000000 10px;
   .container {
     width: 100%;
     height: 100%;
+    position: relative;
     h1 {
       text-align: center;
       font-size: 8vh;
@@ -158,6 +160,15 @@
             }
         }
       }
+    }
+    .blog_arrow{
+      position: absolute;
+      width: 5%;
+      background-color: white;
+      border-radius: 50%;
+      transform: rotate(180deg);
+      bottom: 95%;
+      left: 47.5%;
     }
   }
 }

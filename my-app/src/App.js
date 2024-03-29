@@ -17,8 +17,9 @@ function App() {
                 <Header/>
                 <Main/>
                 </div>
-                <Blog/>
+
                 <Service/>
+                <Blog/>
         </>
     );
 }

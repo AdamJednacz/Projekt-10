@@ -3,6 +3,7 @@ import blog_1 from "../assets/blog_1.jpg";
 import blog_2 from "../assets/blog_2.jpg";
 import blog_3 from "../assets/blog_3.jpg";
 import blog_bg from "../assets/blog_bg.jpg";
+import arrow from "../assets/arrow down.webp";
 const Blog = () => {
     const [activeIndex, setActiveIndex] = useState(null);
     const handleClick = (index) => {
@@ -75,6 +76,7 @@ const Blog = () => {
                         </div>
                     </div>
                 </div>
+                <img className="blog_arrow" src={arrow} alt={arrow}/>
             </div>
         </section>
     );

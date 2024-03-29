@@ -1,5 +1,5 @@
 .service {
-  height: 100vh;
+  height: 90vh;
   background-color: #262a30;
   display: flex;
   align-items: center;
@@ -14,75 +14,8 @@
     justify-content: center;
     flex-direction: column;
 
-    h1 {
-      // Twoje style dla tytułu
-    }
 
-    .service_items {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
 
-      .service_item {
-        margin: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
 
-        .service_item_content {
-          position: relative;
-          cursor: pointer;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-
-          h2 {
-            // Twoje style dla nagłówka h2
-          }
-
-          p {
-            text-align: center;
-          }
-
-          .service_item_icon {
-            // Twoje style dla ikony Font Awesome
-          }
-        }
-
-        .service_item_more {
-          position: relative;
-          display: none;
-          transition: display 0.5s; // Dodaję płynne przejście dla pokazywania listy
-
-          .service_item_more_list {
-            padding: 0;
-            list-style-type: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            .service_item_more_list_item {
-              color: #fff;
-              margin: 5px 0;
-
-              &:before {
-                content: "•";
-                margin-right: 5px;
-              }
-            }
-          }
-        }
-
-        &:hover {
-          .service_item_more {
-            display: block;
-          }
-        }
-      }
-    }
   }
 }
