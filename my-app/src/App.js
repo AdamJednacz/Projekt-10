@@ -3,7 +3,8 @@ import Header from "./jsx/Header";
 import Main from "./jsx/Main";
 import mainbg from "./assets/Main.webp";
 import Blog from "./jsx/Blog";
-import Service from "./jsx/Service";
+import Service from "./jsx/About";
+import About from "./jsx/About";
 
 function App() {
     const style = {
@@ -18,7 +19,7 @@ function App() {
                 <Main/>
                 </div>
 
-                <Service/>
+                <About/>
                 <Blog/>
         </>
     );

@@ -1,0 +1,101 @@
+.about {
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    .about_items{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: relative;
+      z-index: 1;
+      .about_item{
+        position: absolute;
+        display: flex;
+
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 15vw;
+        height: 15vw;
+
+        margin: 2em;
+        padding: 2vw 3vw;
+        text-align: center;
+        top: 5vh;
+
+
+
+
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        background-color: rgba(17, 25, 40, 0.25);
+        -webkit-box-shadow: 0 0 24px -3px rgba(152, 152, 175, 1);
+        -moz-box-shadow: 0 0 24px -3px rgba(152, 152, 175, 1);
+        box-shadow: 0 0 24px -3px rgba(152, 152, 175, 1);
+        backdrop-filter: blur(16px);
+
+        &:nth-of-type(1){
+          border-radius: 30% 70% 72% 28% / 36% 40% 60% 64% ;
+          top: 45vh;
+          left: 7vw;
+
+        }
+        &:nth-of-type(2){
+          border-radius: 73% 27% 41% 59% / 40% 86% 14% 60%  ;
+          left: 22.5vw;
+
+
+        }
+        &:nth-of-type(3){
+          border-radius: 30% 70% 22% 78% / 67% 36% 64% 33%  ;
+          left: 0;
+        }
+        h2{
+          font-size:3vh ;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+        p{
+        line-height: 1.4vh;
+        letter-spacing: 1px;
+        font-size: 1.3vh;
+
+        }
+      }
+
+      .supra3D{
+        position: absolute;
+        max-width: 50%;
+        animation: run 8s ease-in-out infinite;
+        right: -4em;
+        transform: scaleX(-1);
+
+      }
+    }
+  }
+}
+
+@keyframes run {
+  0%{
+    scale: 1;
+
+  }
+  50%{
+    scale: 1.1;
+  }
+  100%{
+    scale: 1;
+  }
+
+}
