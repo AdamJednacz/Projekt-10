@@ -2,9 +2,10 @@ import './App.scss';
 import Header from "./jsx/Header";
 import Main from "./jsx/Main";
 import mainbg from "./assets/Main.webp";
-import Blog from "./jsx/Blog";
+import Offer from "./jsx/Offer";
 import Service from "./jsx/About";
 import About from "./jsx/About";
+import Footer from "./jsx/Footer";
 
 function App() {
     const style = {
@@ -20,7 +21,8 @@ function App() {
                 </div>
 
                 <About/>
-                <Blog/>
+                <Offer/>
+                <Footer/>
         </>
     );
 }

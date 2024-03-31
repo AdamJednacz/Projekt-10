@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, {useEffect, useRef,useState} from 'react';
 import blog_1 from "../assets/blog_1.jpg";
 import blog_2 from "../assets/blog_2.jpg";
 import blog_3 from "../assets/blog_3.jpg";
 import blog_bg from "../assets/blog_bg.jpg";
 import arrow from "../assets/arrow down.webp";
-const Blog = () => {
+const Offer = () => {
     const [activeIndex, setActiveIndex] = useState(null);
     const handleClick = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
@@ -13,13 +13,44 @@ const Blog = () => {
         backgroundImage: `url(${blog_bg})`,
         backgroundSize: "cover"
     };
+
+    const section = useRef(null);
+    const item = useRef(null);
+
+
+
+    useEffect(() => {
+        const sectionElement = section.current;
+        const handleScroll = () => {
+            const elements = item.current;
+            const height = sectionElement.offsetHeight;
+            if (window.scrollY > (height - 200)) {
+                elements.classList.add("change_margin");
+                console.log("dupa")
+                console.log(height)
+
+            } else {
+                elements.classList.remove("change_margin");
+
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll); // Dodaj listener do zdarzenia scroll
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll); // Usuń listener zdarzenia po zakończeniu komponentu
+        };
+    }, []);
+
+
+
     return (
-        <section style={style} className="blog">
+        <section ref={section} style={style} className="offer">
             <div className="container">
-                <h1>BLOG</h1>
-                <div className="blog_items">
-                    <div className={`blog_item ${activeIndex === 0 ? 'active' : ''}`}>
-                        <div className={`blog_item_content ${activeIndex === 0 ? 'reverse' : ''}`}>
+                <h1>OFFER</h1>
+                <div className="offer_items">
+                    <div ref={item} className={`offer_item ${activeIndex === 0 ? 'active' : ''}`}>
+                        <div className={`offer_item_content ${activeIndex === 0 ? 'reverse' : ''}`}>
                             <div className="wrapper">
                                 <img className={`banner-image ${activeIndex === 0? 'none' : ""}`} src={activeIndex === 0 ? "" : blog_1} alt={activeIndex === 0 ? "" : "blog_1"} />
                                 <h2> Lorem ipsum</h2>
@@ -37,8 +68,8 @@ const Blog = () => {
                                 <button onClick={() => handleClick(0)} className="btn">{activeIndex === 0 ? "LESS" : "MORE"}</button>
                         </div>
                     </div>
-                    <div className={`blog_item ${activeIndex === 1 ? 'active' : ''}`}>
-                        <div className={`blog_item_content ${activeIndex === 1 ? 'reverse' : ''}`}>
+                    <div className={`offer_item ${activeIndex === 1 ? 'active' : ''}`}>
+                        <div className={`offer_item_content ${activeIndex === 1 ? 'reverse' : ''}`}>
                             <div className="wrapper">
                                 <img className={`banner-image ${activeIndex === 1? 'none' : ""}`} src={activeIndex === 1 ? "" : blog_2} alt={activeIndex === 1 ? "" : "blog_2"} />
                                 <h2> Lorem ipsum</h2>
@@ -56,8 +87,8 @@ const Blog = () => {
                                 <button onClick={() => handleClick(1)} className="btn btn2">{activeIndex === 1 ? "LESS" : "MORE"}</button>
                         </div>
                     </div>
-                    <div className={`blog_item ${activeIndex === 2 ? 'active' : ''}`}>
-                        <div className={`blog_item_content ${activeIndex === 2 ? 'reverse' : ''}`}>
+                    <div className={`offer_item ${activeIndex === 2 ? 'active' : ''}`}>
+                        <div className={`offer_item_content ${activeIndex === 2 ? 'reverse' : ''}`}>
                             <div className="wrapper">
                                 <img className={`banner-image ${activeIndex === 2? 'none' : ""}`} src={activeIndex === 2 ? "" : blog_3} alt={activeIndex === 2 ? "" : "blog_3"} />
                                 <h2> Lorem ipsum</h2>
@@ -76,9 +107,9 @@ const Blog = () => {
                         </div>
                     </div>
                 </div>
-                <img className="blog_arrow" src={arrow} alt={arrow}/>
+                <img className="offer_arrow" src={arrow} alt={arrow}/>
             </div>
         </section>
     );
 };
-export default Blog;
+export default Offer;

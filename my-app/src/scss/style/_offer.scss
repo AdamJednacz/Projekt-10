@@ -1,4 +1,4 @@
-.blog {
+.offer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +23,7 @@
         background-color: #ffffff;
         position: absolute;
         top: 50%;
-        left: 37.5%;
+        left: 36.5%;
       }
       &::after {
         content: "";
@@ -32,14 +32,14 @@
         background-color: #ffffff;
         position: absolute;
         top: 50%;
-        right: 37.5%;
+        right: 36.5%;
       }
     }
-    .blog_items {
+    .offer_items {
       display: flex;
       justify-content: center;
       align-items: center;
-      .blog_item {
+      .offer_item {
         position: relative;
         backdrop-filter: blur(16px);
         background-color: rgba(17, 25, 40, 0.25);
@@ -47,12 +47,13 @@
         border: 1px solid rgba(255, 255, 255, 0.125);
         padding: 2em;
         margin: 2vw;
+
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
-        transition: 1s;
+        transition:all 1s;
         -webkit-box-shadow: 0 0 24px -3px rgba(152, 152, 175, 1);
         -moz-box-shadow: 0 0 24px -3px rgba(152, 152, 175, 1);
         box-shadow: 0 0 24px -3px rgba(152, 152, 175, 1);
@@ -62,7 +63,7 @@
           -moz-box-shadow: 0 0 24px 7px rgba(152, 152, 175, 1);
           box-shadow: 0 0 24px 7px rgba(152, 152, 175, 1);
         }
-        .blog_item_content {
+        .offer_item_content {
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -158,7 +159,7 @@
         }
       }
     }
-    .blog_arrow{
+    .offer_arrow{
       position: absolute;
       width: 5%;
       background-color: white;
@@ -186,4 +187,8 @@
 }
 .btn2{
   margin-top:4vh ;
+}
+
+.change_margin{
+  margin: 4vw;
 }
