@@ -1,0 +1,78 @@
+.select {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    .select_text > p{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20em;
+      height: 3em;
+      background-color: #34495e;
+      border-radius: .25em;
+      font-size: 2vh;
+      margin: 2em;
+      color: #ffffff;
+      &:first-of-type{
+        margin-top: 0;
+      }
+    }
+    .select_wrapper{
+      position: relative;
+      display: flex;
+      width: 20em;
+      height: 3em;
+      border-radius: .25em;
+      overflow: hidden;
+      margin: 2em;
+      font-size: 2vh;
+      &:first-of-type{
+        margin-bottom: 0;
+      }
+      &::after {
+        content: '\25BC';
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #ffffff;
+        padding: 1em;
+        background-color: #34495e;
+        transition: .25s all ease;
+        pointer-events: none;
+
+      }
+
+      &:hover::after {
+        color: gold;
+        transform: rotateX(180deg);
+      }
+
+      select {
+        appearance: none;
+        outline: 10px red;
+        border: 0;
+        box-shadow: none;
+        color: white;
+        font-weight: 500;
+        flex: 1;
+        padding: 0 1em;
+
+        background-color: #34495e;
+        background-image: none;
+        cursor: pointer;
+
+
+      }
+    }
+  }
+}
+
+
+/* Arrow */

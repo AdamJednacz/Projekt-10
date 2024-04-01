@@ -1,0 +1,96 @@
+[
+  {
+    "brand": "Toyota",
+    "models": [
+      {
+        "name":"Supra mk4" ,
+        "fuelType": "Petrol",
+
+        "hp": "280hp",
+        "year": "2000"
+
+      },
+      {
+        "name":"Supra mk5" ,
+        "fuelType": "Petrol",
+
+        "hp": "340hp",
+        "year": "2022"
+
+      },
+      {
+        "name":"Rav 4" ,
+        "fuelType": "Petrol",
+
+        "hp": "173hp",
+        "year": "2022"
+
+      }
+    ]
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "models": [
+      {
+        "name":"CLA AMG" ,
+        "fuelType": "Petrol",
+
+        "hp": "224hp",
+        "year": "2023"
+
+      },
+      {
+        "name":"GLC AMG" ,
+        "fuelType": "Petrol",
+
+        "hp": "390hp",
+        "year": "2022"
+      },
+      {
+        "name":"AMG GT C190" ,
+        "fuelType": "Petrol",
+
+        "hp": "585hp",
+        "year": "2022"
+
+      }
+    ]
+  },
+  {
+    "brand": "Honda",
+    "models": [
+      {
+        "name":"NSX I" ,
+        "fuelType": "Petrol",
+
+        "hp": "280hp",
+        "year": "2005"
+
+      },
+      {
+        "name":"Acord 8" ,
+        "fuelType": "Petrol",
+
+        "hp": "282hp",
+        "year": "2016"
+
+      },
+      {
+        "name":"Civic Type R" ,
+        "fuelType": "Petrol",
+
+        "hp": "329hp",
+        "year": "2022"
+      }
+    ]
+  }
+
+
+
+
+
+
+
+
+
+]
