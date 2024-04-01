@@ -10,6 +10,7 @@ const Header = () => {
                     <li className="header_menu_element">About</li>
                     <li className="header_menu_element">Offer</li>
                     <li className="header_menu_element">Contact</li>
+                    <li className="header_menu_element">Select</li>
                 </ul>
             </div>
         </header>

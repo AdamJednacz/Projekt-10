@@ -6,6 +6,7 @@ import Offer from "./jsx/Offer";
 import Service from "./jsx/About";
 import About from "./jsx/About";
 import Footer from "./jsx/Footer";
+import Select from "./jsx/Select";
 
 function App() {
     const style = {
@@ -13,16 +14,15 @@ function App() {
         backgroundSize: "cover"
     }
     return (
-
         <>
                 <div className="header_main" style={style}>
                 <Header/>
                 <Main/>
                 </div>
-
                 <About/>
                 <Offer/>
-                <Footer/>
+                <Select/>
+
         </>
     );
 }

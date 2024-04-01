@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   color: #ffffff;
-
+  border-bottom: solid #000000 10px;
   .container {
     display: flex;
     align-items: center;
@@ -13,6 +13,7 @@
     width: 100%;
     height: 100%;
     z-index: 1;
+    position: relative;
     .about_items{
       width: 100%;
       height: 100%;
@@ -34,7 +35,7 @@
         padding: 2vw 3vw;
         text-align: center;
 
-        transition: all 4s ease-in-out;
+        transition: all 3s ease-in-out;
 
 
 
@@ -53,12 +54,11 @@
         &:nth-of-type(2){
           border-radius: 73% 27% 41% 59% / 40% 86% 14% 60%  ;
 
-
-
         }
         &:nth-of-type(3){
           border-radius: 30% 70% 22% 78% / 67% 36% 64% 33%  ;
-
+          right: -60em;
+          bottom: -20em;
         }
         h2{
           font-size:3vh ;
@@ -81,6 +81,15 @@
         transform: scaleX(-1);
 
       }
+    }
+    .about_arrow{
+      position: absolute;
+      width: 5%;
+      background-color: white;
+      border-radius: 50%;
+      transform: rotate(180deg);
+      top: 96.5%;
+      left: 47.5%;
     }
   }
 }
@@ -113,12 +122,13 @@
 
 }
 
-.moveX{
+.move1{
   transform: translateY(-20em) translateX(60em);
-
+}
+.move3{
+  transform: translateY(-20em) translateX(-60em);
 }
 
 .show{
-
-  animation: show 3s ease-in-out;
+  animation: show 2s ease-in-out;
 }

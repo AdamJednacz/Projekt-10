@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-top: solid #000000 10px;
+  height: 100vh;
+  border-bottom: solid #000000 10px;
   .container {
     width: 100%;
     height: 100%;
@@ -46,7 +46,7 @@
         border-radius: 12px;
         border: 1px solid rgba(255, 255, 255, 0.125);
         padding: 2em;
-        margin: 2vw;
+        margin: 4vw;
 
         display: flex;
         flex-direction: column;
@@ -62,6 +62,9 @@
           -webkit-box-shadow: 0 0 24px 7px rgba(152, 152, 175, 1);
           -moz-box-shadow: 0 0 24px 7px rgba(152, 152, 175, 1);
           box-shadow: 0 0 24px 7px rgba(152, 152, 175, 1);
+        }
+        &:nth-of-type(1){
+
         }
         .offer_item_content {
           display: flex;
@@ -165,7 +168,7 @@
       background-color: white;
       border-radius: 50%;
       transform: rotate(180deg);
-      bottom: 95%;
+      top: 96.5%;
       left: 47.5%;
     }
   }
@@ -190,5 +193,6 @@
 }
 
 .change_margin{
-  margin: 4vw;
+margin: 2vw !important;
+
 }

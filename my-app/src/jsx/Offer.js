@@ -4,6 +4,7 @@ import blog_2 from "../assets/blog_2.jpg";
 import blog_3 from "../assets/blog_3.jpg";
 import blog_bg from "../assets/blog_bg.jpg";
 import arrow from "../assets/arrow down.webp";
+import useScrollEffect from "./useEffect_change_margin";
 const Offer = () => {
     const [activeIndex, setActiveIndex] = useState(null);
     const handleClick = (index) => {
@@ -15,32 +16,9 @@ const Offer = () => {
     };
 
     const section = useRef(null);
-    const item = useRef(null);
+    const itemsRefs = [useRef(null), useRef(null), useRef(null)];
 
-
-
-    useEffect(() => {
-        const sectionElement = section.current;
-        const handleScroll = () => {
-            const elements = item.current;
-            const height = sectionElement.offsetHeight;
-            if (window.scrollY > (height - 200)) {
-                elements.classList.add("change_margin");
-                console.log("dupa")
-                console.log(height)
-
-            } else {
-                elements.classList.remove("change_margin");
-
-            }
-        }
-
-        window.addEventListener('scroll', handleScroll); // Dodaj listener do zdarzenia scroll
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll); // Usuń listener zdarzenia po zakończeniu komponentu
-        };
-    }, []);
+    useScrollEffect(section, itemsRefs);
 
 
 
@@ -49,7 +27,7 @@ const Offer = () => {
             <div className="container">
                 <h1>OFFER</h1>
                 <div className="offer_items">
-                    <div ref={item} className={`offer_item ${activeIndex === 0 ? 'active' : ''}`}>
+                    <div ref={itemsRefs[0]} className={`offer_item ${activeIndex === 0 ? 'active' : ''}`}>
                         <div className={`offer_item_content ${activeIndex === 0 ? 'reverse' : ''}`}>
                             <div className="wrapper">
                                 <img className={`banner-image ${activeIndex === 0? 'none' : ""}`} src={activeIndex === 0 ? "" : blog_1} alt={activeIndex === 0 ? "" : "blog_1"} />
@@ -68,7 +46,7 @@ const Offer = () => {
                                 <button onClick={() => handleClick(0)} className="btn">{activeIndex === 0 ? "LESS" : "MORE"}</button>
                         </div>
                     </div>
-                    <div className={`offer_item ${activeIndex === 1 ? 'active' : ''}`}>
+                    <div ref={itemsRefs[1]} className={`offer_item ${activeIndex === 1 ? 'active' : ''}`}>
                         <div className={`offer_item_content ${activeIndex === 1 ? 'reverse' : ''}`}>
                             <div className="wrapper">
                                 <img className={`banner-image ${activeIndex === 1? 'none' : ""}`} src={activeIndex === 1 ? "" : blog_2} alt={activeIndex === 1 ? "" : "blog_2"} />
@@ -87,7 +65,7 @@ const Offer = () => {
                                 <button onClick={() => handleClick(1)} className="btn btn2">{activeIndex === 1 ? "LESS" : "MORE"}</button>
                         </div>
                     </div>
-                    <div className={`offer_item ${activeIndex === 2 ? 'active' : ''}`}>
+                    <div ref={itemsRefs[2]} className={`offer_item ${activeIndex === 2 ? 'active' : ''}`}>
                         <div className={`offer_item_content ${activeIndex === 2 ? 'reverse' : ''}`}>
                             <div className="wrapper">
                                 <img className={`banner-image ${activeIndex === 2? 'none' : ""}`} src={activeIndex === 2 ? "" : blog_3} alt={activeIndex === 2 ? "" : "blog_3"} />
