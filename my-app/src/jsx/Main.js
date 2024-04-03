@@ -11,7 +11,7 @@ const Main = ({windowMainHeight}) => {
         <section  className="main">
             <div className="container">
                 <h1>Car Sharing</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, minus.</p>
+                <p>Lorem ipsum dolor sit amet consectetdur adipisicing elit. Suscipit, minus.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</p>
                 <p>Lorem ipsum dolor sit amet</p>
                 <div className="main_btns">
